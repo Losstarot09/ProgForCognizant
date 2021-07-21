@@ -1,6 +1,0 @@
-INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 1', '0 days', 'Task group 1', 'assignee 1', FALSE)
-INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 1', '0 days', 'Task group 1', 'assignee 2', FALSE)
-INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 2', '0 days', 'Task group 2', 'assignee 1', FALSE)
-INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 4', '0 days', 'Task group 2', 'assignee 3', FALSE)
-INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 5', '0 days', 'Task group 3', 'assignee 2', FALSE)
-INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 6', '0 days', 'Task group 3', 'assignee 2', FALSE)
