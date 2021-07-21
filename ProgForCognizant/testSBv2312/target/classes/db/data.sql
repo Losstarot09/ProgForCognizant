@@ -1,0 +1,13 @@
+INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 1', '0 days', 'Task group 1', 'assignee 1', FALSE)
+INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 2', '0 days', 'Task group 1', 'assignee 2', FALSE)
+INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 3', '0 days', 'Task group 2', 'assignee 1', FALSE)
+INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 4', '0 days', 'Task group 2', 'assignee 3', FALSE)
+INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 5', '0 days', 'Task group 3', 'assignee 2', FALSE)
+INSERT INTO TASKS (name, time_spent, task_group, assignee, complete_status) VALUES ('Test task 6', '0 days', 'Task group 3', 'assignee 2', FALSE)
+
+INSERT INTO SUBTASKS (name, task_id, time_spent, task_group, assignee, complete_status) VALUES ('Test subtask 11', 1, '0 days', 'Task group 1', 'assignee 11', FALSE)
+INSERT INTO SUBTASKS (name, task_id, time_spent, task_group, assignee, complete_status) VALUES ('Test subtask 12', 1, '0 days', 'Task group 1', 'assignee 12', FALSE)
+INSERT INTO SUBTASKS (name, task_id, time_spent, task_group, assignee, complete_status) VALUES ('Test subtask 13', 1, '0 days', 'Task group 1', 'assignee 13', FALSE)
+INSERT INTO SUBTASKS (name, task_id, time_spent, task_group, assignee, complete_status) VALUES ('Test subtask 21', 2, '0 days', 'Task group 1', 'assignee 14', FALSE)
+INSERT INTO SUBTASKS (name, task_id, time_spent, task_group, assignee, complete_status) VALUES ('Test subtask 22', 2, '0 days', 'Task group 1', 'assignee 15', FALSE)
+INSERT INTO SUBTASKS (name, task_id, time_spent, task_group, assignee, complete_status) VALUES ('Test subtask 31', 3, '0 days', 'Task group 3', 'assignee 16', FALSE)
