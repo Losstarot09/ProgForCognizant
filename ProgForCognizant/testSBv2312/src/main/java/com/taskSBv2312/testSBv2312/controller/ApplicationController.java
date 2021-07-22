@@ -66,6 +66,9 @@ public class ApplicationController {
     @PostMapping("/save-existing-task")
     public String editTask(@ModelAttribute Task task, BindingResult bindingResult,
                            HttpServletRequest request) {
+
+        subTaskService.changeSubtasksGroup(task.gettId(), task.getGroup());
+
         if (task.getFinished().equals(false)) {
             taskService.saveTask(task);
             request.setAttribute("mode", "MODE_SHOW-TASKS");
@@ -127,7 +130,7 @@ public class ApplicationController {
     @RequestMapping("/edit-subtask-form")
     public String editSubTaskForm(@RequestParam Long id, HttpServletRequest request) {
         request.setAttribute("taskName",
-                taskService.findTask(subTaskService.findSubtaskById(id).gettId()));
+                taskService.findTask(subTaskService.findSubtaskById(id).gettId()).gettName());
         request.setAttribute("subTask", subTaskService.findSubtaskById(id));
         request.setAttribute("mode", "MODE_EDIT-SUBTASK-FORM");
         return "home";

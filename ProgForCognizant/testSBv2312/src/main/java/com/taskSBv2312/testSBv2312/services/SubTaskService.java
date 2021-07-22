@@ -53,4 +53,12 @@ public class SubTaskService {
         }
         return status;
     }
+
+    public void changeSubtasksGroup( Long taskId, String taskGroup) {
+        for (Subtask subTask: subTaskRepository.findAll()) {
+            if (taskId.equals(subTask.gettId())) {
+                subTaskRepository.findById(subTask.getsTId()).orElse(new Subtask()).setGroup(taskGroup);
+            }
+        }
+    }
 }

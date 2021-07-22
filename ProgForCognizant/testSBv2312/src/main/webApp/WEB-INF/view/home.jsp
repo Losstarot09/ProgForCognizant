@@ -235,7 +235,7 @@
 
             <c:when test="${mode=='MODE_EDIT-SUBTASK-FORM' }">
                 <div class="container text-center">
-                    <h3>Update Subtask for Task: ${taskName}</h3>
+                    <h3>Update Subtask (${subTask.sTName }) for Task: ${taskName}</h3>
                     <hr>
                     <form class="form-horizontal" method="POST" action="save-existing-subtask">
                         <input type="hidden" name="sTId" value="${subTask.sTId }" />
@@ -254,7 +254,13 @@
                                     value="${subTask.timeSpent }" />
                             </div>
                         </div>
-                        <input type="hidden" name="group" value="${subTask.group }" />
+			            <div class="form-group">
+                            <label class="control-label col-md-3">Group</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" name="group"
+                                    value="${subTask.group }" />
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">Assignee</label>
                             <div class="col-md-7">
