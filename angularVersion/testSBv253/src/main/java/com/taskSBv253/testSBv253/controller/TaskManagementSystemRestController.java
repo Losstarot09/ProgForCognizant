@@ -20,7 +20,7 @@ public class TaskManagementSystemRestController {
         this.taskService = taskService;
     }
 
-    @GetMapping("/all")
+    @GetMapping("/allTasks")
     public ResponseEntity<List<Task>> getAllTasks() {
         List<Task> allTasks = taskService.showAllTasks();
         return new ResponseEntity<>(allTasks, HttpStatus.OK);
@@ -38,13 +38,13 @@ public class TaskManagementSystemRestController {
         return new ResponseEntity<>(newTask, HttpStatus.CREATED);
     }
 
-    @PutMapping("/updateTask")
-    public ResponseEntity<Task> updateTask (@RequestBody Task task){
-        Task updateTask = taskService.saveTask(task);
-        return new ResponseEntity<>(updateTask, HttpStatus.OK);
+    @PutMapping("/editTask")
+    public ResponseEntity<Task> editTask (@RequestBody Task task){
+        Task editTask = taskService.saveTask(task);
+        return new ResponseEntity<>(editTask, HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deleteTask/{id}")
     public ResponseEntity<?> deleteTask (@PathVariable("id") Long id){
         taskService.deleteTask(id);
         return new ResponseEntity<>(HttpStatus.OK);
